@@ -1,6 +1,8 @@
 package cn.com.bank.entity;
 
-public class BankCustomerInfo {
+import java.io.Serializable;
+
+public class BankCustomerInfo implements Serializable{
     private Integer cmId;
 
     private String cmName;
