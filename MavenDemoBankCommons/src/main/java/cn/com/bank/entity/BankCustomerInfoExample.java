@@ -234,6 +234,76 @@ public class BankCustomerInfoExample {
             return (Criteria) this;
         }
 
+        public Criteria andCmHeadImgIsNull() {
+            addCriterion("cm_head_img is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgIsNotNull() {
+            addCriterion("cm_head_img is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgEqualTo(String value) {
+            addCriterion("cm_head_img =", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgNotEqualTo(String value) {
+            addCriterion("cm_head_img <>", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgGreaterThan(String value) {
+            addCriterion("cm_head_img >", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgGreaterThanOrEqualTo(String value) {
+            addCriterion("cm_head_img >=", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgLessThan(String value) {
+            addCriterion("cm_head_img <", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgLessThanOrEqualTo(String value) {
+            addCriterion("cm_head_img <=", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgLike(String value) {
+            addCriterion("cm_head_img like", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgNotLike(String value) {
+            addCriterion("cm_head_img not like", value, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgIn(List<String> values) {
+            addCriterion("cm_head_img in", values, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgNotIn(List<String> values) {
+            addCriterion("cm_head_img not in", values, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgBetween(String value1, String value2) {
+            addCriterion("cm_head_img between", value1, value2, "cmHeadImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andCmHeadImgNotBetween(String value1, String value2) {
+            addCriterion("cm_head_img not between", value1, value2, "cmHeadImg");
+            return (Criteria) this;
+        }
+
         public Criteria andCmPhoneIsNull() {
             addCriterion("cm_phone is null");
             return (Criteria) this;

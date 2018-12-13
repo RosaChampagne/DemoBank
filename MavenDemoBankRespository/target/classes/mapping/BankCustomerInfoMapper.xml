@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="cn.com.bank.entity.BankCustomerInfo">
     <id column="cm_id" jdbcType="INTEGER" property="cmId" />
     <result column="cm_name" jdbcType="VARCHAR" property="cmName" />
+    <result column="cm_head_img" jdbcType="VARCHAR" property="cmHeadImg" />
     <result column="cm_phone" jdbcType="VARCHAR" property="cmPhone" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -65,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    cm_id, cm_name, cm_phone
+    cm_id, cm_name, cm_head_img, cm_phone
   </sql>
   <select id="selectByExample" parameterType="cn.com.bank.entity.BankCustomerInfoExample" resultMap="BaseResultMap">
     select
@@ -98,10 +99,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.com.bank.entity.BankCustomerInfo">
-    insert into bnk_customer_info (cm_id, cm_name, cm_phone
-      )
-    values (#{cmId,jdbcType=INTEGER}, #{cmName,jdbcType=VARCHAR}, #{cmPhone,jdbcType=VARCHAR}
-      )
+    insert into bnk_customer_info (cm_id, cm_name, cm_head_img, 
+      cm_phone)
+    values (#{cmId,jdbcType=INTEGER}, #{cmName,jdbcType=VARCHAR}, #{cmHeadImg,jdbcType=VARCHAR}, 
+      #{cmPhone,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.com.bank.entity.BankCustomerInfo">
     insert into bnk_customer_info
@@ -111,6 +112,9 @@
       </if>
       <if test="cmName != null">
         cm_name,
+      </if>
+      <if test="cmHeadImg != null">
+        cm_head_img,
       </if>
       <if test="cmPhone != null">
         cm_phone,
@@ -122,6 +126,9 @@
       </if>
       <if test="cmName != null">
         #{cmName,jdbcType=VARCHAR},
+      </if>
+      <if test="cmHeadImg != null">
+        #{cmHeadImg,jdbcType=VARCHAR},
       </if>
       <if test="cmPhone != null">
         #{cmPhone,jdbcType=VARCHAR},
@@ -143,6 +150,9 @@
       <if test="record.cmName != null">
         cm_name = #{record.cmName,jdbcType=VARCHAR},
       </if>
+      <if test="record.cmHeadImg != null">
+        cm_head_img = #{record.cmHeadImg,jdbcType=VARCHAR},
+      </if>
       <if test="record.cmPhone != null">
         cm_phone = #{record.cmPhone,jdbcType=VARCHAR},
       </if>
@@ -155,6 +165,7 @@
     update bnk_customer_info
     set cm_id = #{record.cmId,jdbcType=INTEGER},
       cm_name = #{record.cmName,jdbcType=VARCHAR},
+      cm_head_img = #{record.cmHeadImg,jdbcType=VARCHAR},
       cm_phone = #{record.cmPhone,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -166,6 +177,9 @@
       <if test="cmName != null">
         cm_name = #{cmName,jdbcType=VARCHAR},
       </if>
+      <if test="cmHeadImg != null">
+        cm_head_img = #{cmHeadImg,jdbcType=VARCHAR},
+      </if>
       <if test="cmPhone != null">
         cm_phone = #{cmPhone,jdbcType=VARCHAR},
       </if>
@@ -175,6 +189,7 @@
   <update id="updateByPrimaryKey" parameterType="cn.com.bank.entity.BankCustomerInfo">
     update bnk_customer_info
     set cm_name = #{cmName,jdbcType=VARCHAR},
+      cm_head_img = #{cmHeadImg,jdbcType=VARCHAR},
       cm_phone = #{cmPhone,jdbcType=VARCHAR}
     where cm_id = #{cmId,jdbcType=INTEGER}
   </update>

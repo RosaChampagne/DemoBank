@@ -1,8 +1,6 @@
 package cn.com.bank.entity;
 
-import java.io.Serializable;
-
-public class BankOperator implements Serializable {
+public class BankOperator {
     private Integer opId;
 
     private String opUserName;

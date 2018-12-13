@@ -1,11 +1,11 @@
 package cn.com.bank.entity;
 
-import java.io.Serializable;
-
-public class BankCustomerInfo implements Serializable {
+public class BankCustomerInfo {
     private Integer cmId;
 
     private String cmName;
+
+    private String cmHeadImg;
 
     private String cmPhone;
 
@@ -23,6 +23,14 @@ public class BankCustomerInfo implements Serializable {
 
     public void setCmName(String cmName) {
         this.cmName = cmName == null ? null : cmName.trim();
+    }
+
+    public String getCmHeadImg() {
+        return cmHeadImg;
+    }
+
+    public void setCmHeadImg(String cmHeadImg) {
+        this.cmHeadImg = cmHeadImg == null ? null : cmHeadImg.trim();
     }
 
     public String getCmPhone() {

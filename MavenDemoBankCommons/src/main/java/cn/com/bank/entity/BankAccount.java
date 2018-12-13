@@ -1,9 +1,8 @@
 package cn.com.bank.entity;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class BankAccount implements Serializable {
+public class BankAccount {
     private String accCode;
 
     private Integer cmId;

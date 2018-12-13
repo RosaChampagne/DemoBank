@@ -1,10 +1,9 @@
 package cn.com.bank.entity;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class BankTransRecord implements Serializable {
+public class BankTransRecord {
     private Integer trnId;
 
     private String accCode;

@@ -1,9 +1,8 @@
 package cn.com.bank.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class BankOperateLog implements Serializable {
+public class BankOperateLog {
     private Integer opLgId;
 
     private Integer opId;
